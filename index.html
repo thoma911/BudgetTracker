@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Budget Tracker – Week 4 (Start)</title>
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -20,7 +21,20 @@
 
     <section id="transactions" class="tab">
       <h2>Transacties</h2>
-      <p>Hier komen de transacties.</p>
+      <!-- formulier voor nieuwe transacties -->
+      <form id="txForm">
+        <input type="date" id="date" />
+        <input type="number" id="amount" placeholder="Bedrag" />
+        <select id="type">
+          <option value="income">Inkomen</option>
+          <option value="expense">Uitgave</option>
+        </select>
+        <input type="text" id="category" placeholder="Categorie" />
+        <button type="submit">Toevoegen</button>
+      </form>
+
+      <!-- lijst met transacties -->
+      <ul id="txList"></ul>
     </section>
 
     <section id="subscriptions" class="tab" hidden>
@@ -34,7 +48,7 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
